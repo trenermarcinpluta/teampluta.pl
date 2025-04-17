@@ -53,6 +53,8 @@
   }
 
   h1 {
+    margin-left: 2cm;
+    color: white;
     font-size: 2em;
     margin-bottom: 10px;
   }
@@ -117,4 +119,11 @@
    
   .social-media2 a:hover .fa-facebook {
     color: #3b5998;
+  }
+
+  .usluga{
+  margin-top: 2cm;
+  font-size: 25px;
+  color: white;
+  margin-left: 0.5cm;
   }
