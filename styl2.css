@@ -228,3 +228,52 @@ h1{
 .social-media2 a:hover .fa-facebook {
   color: #3b5998;
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .form-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section form {
+    width: 95%;
+    height: auto;
+  }
+
+  .lewa,
+  .prawa {
+    width: 100%;
+    float: none;
+  }
+
+  h1 {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  textarea {
+    padding: 30px;
+  }
+
+  .social-media1 a,
+  .social-media2 a {
+    font-size: 24px;
+  }
+}

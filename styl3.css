@@ -127,3 +127,53 @@
   color: white;
   margin-left: 0.5cm;
   }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .logo img {
+      margin: 0 auto;
+      width: 60px;
+      height: 60px;
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+    }
+  
+    .menu a {
+      margin: 0;
+    }
+  
+    h1 {
+      font-size: 6vw;
+      margin: 20px auto;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .usluga {
+      margin-top: 20px;
+      margin-left: 10px;
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .social-media1 a,
+    .social-media2 a {
+      font-size: 24px;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  }
+  
+  
