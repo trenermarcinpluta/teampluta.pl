@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moja Strona</title>
+  <link rel="stylesheet" href="styl3.css"/>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="glowna.html">
+        <img src="logo-transparent.png" alt="Logo" />
+      </a>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="glowna.html">STRONA GŁÓWNA</a></li>
+        <li><a href="uslugi.html">USŁUGI</a></li>
+        <li><a href="kontakt.html">KONTAKT</a></li>
+        <div class="social-media1">
+          <a href="https://www.instagram.com/trener_marcinpluta/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+          <div class="social-media2">
+          <a href="https://www.facebook.com/marcin.pluta.568?locale=pl_PL" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Marcin Pluta. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const currentPath = window.location.pathname.split("/").pop();
+      const menuLinks = document.querySelectorAll(".menu a");
+  
+      menuLinks.forEach(function (link) {
+        const linkPath = link.getAttribute("href");
+        if (linkPath === currentPath || (linkPath === "glowna.html" && currentPath === "")) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+  
+
+</body>
+</html>
+
+

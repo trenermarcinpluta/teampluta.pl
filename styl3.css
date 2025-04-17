@@ -1,0 +1,120 @@
+* {
+    font-family: verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;  
+    color: white;
+  }
+  
+  .logo img {
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-right: 20px;
+  }
+  
+  .menu a:hover {
+    color: #ff3b3b;
+  }
+  
+  main {
+    flex: 1; 
+    padding: 20px;
+    background-color: #111111;
+  }
+  
+  .menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  body {
+    min-height: 100vh;           
+    display: flex;               
+    flex-direction: column;     
+    margin: 0;             
+  }
+  
+  footer {
+    background-color: #000000;  
+    color: #fff;                 
+    text-align: center;         
+    padding: 20px;              
+  }
+
+  .menu a.active {
+    color: #922020;
+    font-weight: bold;
+  }
+
+  .social-media1 {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .social-media2 {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  .social-media1 a {
+    margin: 0 10px;
+    font-size: 32px;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+  
+  .social-media1 a:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-media1 a:hover .fa-instagram {
+    color: #e4405f;
+  }
+  
+  .social-media2 a {
+    margin: 0;
+    font-size: 30px;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+  
+  .social-media2 a:hover {
+    transform: scale(1.2);
+  }
+   
+  .social-media2 a:hover .fa-facebook {
+    color: #3b5998;
+  }

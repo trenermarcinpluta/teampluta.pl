@@ -1,0 +1,230 @@
+* {
+    font-family: verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;  
+    color: white;
+  }
+  
+  .logo img {
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-right: 20px;
+  }
+
+  .menu a:hover {
+    color: #ff3b3b;
+  }
+
+  .menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  .menu ul li {
+    margin: 0;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  main {
+    flex: 1; 
+    padding: 20px;
+    background-color: #111111;
+  }
+  
+  form {
+    background: #1f1e1e;
+    padding: 20px;
+    border-radius: 40px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background: #000000;
+    color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #ffffff;
+  }
+  
+  button {
+    background: #790b0b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: #ff3b3b;
+  }
+
+  body {
+    min-height: 100vh;           
+    display: flex;               
+    flex-direction: column;     
+    margin: 0;                
+  }
+  
+  footer {
+    background-color: #000000;
+    color: #fff;                 
+    text-align: center;         
+    padding: 20px;              
+  }
+
+  h2, p{
+    color: white;
+  }
+
+  .menu a.active {
+    color: #922020;
+    font-weight: bold;
+  }
+
+  .form-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  
+  .form-section form {
+    width: 800px; 
+    height: 600px;
+    background: #141414;
+    padding: 20px;
+    border-radius: 40px;
+  }
+  
+
+textarea{
+  padding: 60px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.napisy-form{
+  
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.kontakt{
+  margin-top: 2cm;
+}
+
+.lewa{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.prawa{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.form-section{
+  margin-top: 60px;
+}
+
+.form-container{
+  margin-top: 0;
+}
+
+h1{
+  color: rgb(90, 3, 3);
+}
+
+.hl{
+  color: #790b0b;
+}
+
+.social-media1 {
+  padding: 10px;
+  text-align: center;
+}
+
+.social-media2 {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.social-media1 a {
+  margin: 0 10px;
+  font-size: 32px;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.social-media1 a:hover {
+  transform: scale(1.2);
+}
+
+.social-media1 a:hover .fa-instagram {
+  color: #e4405f;
+}
+
+.social-media2 a {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.social-media2 a:hover {
+  transform: scale(1.2);
+}
+ 
+.social-media2 a:hover .fa-facebook {
+  color: #3b5998;
+}
