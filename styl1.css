@@ -1,0 +1,139 @@
+* {
+  font-family: verdana;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+
+.logo img {
+  margin-left: 50px;
+  width: 80px;
+  height: 80px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; 
+}
+
+.menu ul li {
+  margin: 0;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ff3b3b;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #111111;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.menu a.active {
+  color: #922020;
+  font-weight: bold;
+}
+
+.menu ul li a i {
+  font-size: 1.5em;
+  color: rgb(43, 42, 42);
+  scale: 1.5;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu ul li a[aria-label="Facebook"] i:hover {
+  color: #1877f2;
+  transform: scale(1.5);
+}
+
+.menu ul li a[aria-label="Instagram"] i:hover {
+  color: #e1306c;
+  transform: scale(1.5);
+}
+
+/* Nowe reguły w media queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu ul li a i {
+    font-size: 1.5em;
+  }
+
+  /* Dajemy im trochę przestrzeni do oddychania */
+  .menu ul li {
+    padding: 5px 0;
+  }
+  
+  .logo img {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    margin: 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+}
