@@ -91,14 +91,7 @@ main {
   background-color: #111111;
 }
 
-.usluga {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 40px;
-  font-size: 25px;
-  color: #790b0b;
-  margin-left: 0.5cm;
-}
+
 
 h1 {
   font-size: 6vw;
@@ -235,11 +228,7 @@ footer {
     text-align: center;
   }
 
-  .usluga {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
-  }
+ 
 
   .services-container {
     grid-template-columns: 1fr;
@@ -273,9 +262,7 @@ footer {
     font-size: 1.1rem;
   }
 
-  .usluga {
-    font-size: 32px;
-  }
+ 
 
   .full-width-button {
     width: 50%;
@@ -291,11 +278,7 @@ footer {
     height: 50px;
   }
 
-  .usluga {
-    font-size: 18px;
-    margin-top: 40px;
-    margin-left: 0;
-  }
+ 
 
   .service-box {
     height: 220px;
