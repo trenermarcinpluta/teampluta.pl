@@ -94,7 +94,7 @@ main {
 .usluga {
   font-weight: bold;
   text-align: center;
-  margin-top: 2cm;
+  margin-top: 40px;
   font-size: 25px;
   color: #790b0b;
   margin-left: 0.5cm;
@@ -293,7 +293,7 @@ footer {
 
   .usluga {
     font-size: 18px;
-    margin-top: 15px;
+    margin-top: 40px;
     margin-left: 0;
   }
 
