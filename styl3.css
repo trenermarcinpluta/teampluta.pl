@@ -16,7 +16,7 @@ header {
 
 .logo img {
   margin-left: 50px;
-  width: 80px;
+  width: 180px;
   height: 80px;
 }
 
@@ -121,7 +121,7 @@ p {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .form-section form {
@@ -133,15 +133,13 @@ p {
 }
 
 textarea {
-  padding: 60px;
+  height: 200px;
+  resize: none;
+  padding: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.napisy-form {
-  margin-top: 15px;
-  font-size: 16px;
-}
 
 .kontakt {
   margin-top: 2cm;
@@ -188,6 +186,31 @@ h1 {
   transform: scale(1.5);
 }
 
+.napisy-form{
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.ask{
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .form-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lewa,
+  .prawa {
+    width: 100%;
+  }
+
+  .form-section form {
+    width: 100%;
+  }
+}
+
 /* MOBILE STYLES */
 @media (max-width: 768px) {
   header {
@@ -210,7 +233,7 @@ h1 {
 
   .logo img {
     margin: 0 auto;
-    width: 60px;
+    width: 140px;
     height: 60px;
   }
 

@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #111111;
+  color: #ffffff;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -15,15 +24,19 @@ header {
 }
 
 .logo img {
-  margin-left: 50px; 
-  width: 80px;
+  margin-left: 50px;
+  width: 180px;
   height: 80px;
 }
 
 .menu ul {
   list-style: none;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
+  margin-bottom: 5px;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .menu ul li {
@@ -43,10 +56,33 @@ header {
   color: white;
   font-weight: bold;
   transition: color 0.3s;
+  margin: 0;
 }
 
 .menu a:hover {
   color: #ff3b3b;
+}
+
+.menu a.active {
+  color: #922020;
+  font-weight: bold;
+}
+
+.menu ul li a i {
+  font-size: 1.5em;
+  color: rgb(43, 42, 42);
+  scale: 1.5;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu ul li a[aria-label="Facebook"] i:hover {
+  color: #1877f2;
+  transform: scale(1.5);
+}
+
+.menu ul li a[aria-label="Instagram"] i:hover {
+  color: #e1306c;
+  transform: scale(1.5);
 }
 
 main {
@@ -55,49 +91,13 @@ main {
   background-color: #111111;
 }
 
-h1 {
-  margin-left: 2cm;
-  color: white;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-footer {
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.menu a.active {
-  color: #922020;
-  font-weight: bold;
-}
-
 .usluga {
+  font-weight: bold;
+  text-align: center;
   margin-top: 2cm;
   font-size: 25px;
-  color: white;
+  color: #790b0b;
   margin-left: 0.5cm;
-}
-
-
-.menu ul {
-  flex-direction: row; /* Menu w poziomie */
-  align-items: center;
-  gap: 20px; /* Odstępy między elementami */
-  padding: 10px 0;
-}
-
-.menu a {
-  margin: 0;
 }
 
 h1 {
@@ -105,18 +105,6 @@ h1 {
   margin: 20px auto;
   text-align: center;
   margin-left: 0;
-}
-
-.usluga {
-  color: #790b0b;
-  margin-top: 20px;
-  margin-left: 10px;
-  font-size: 20px;
-  text-align: center;
-}
-
-main {
-  padding: 10px;
 }
 
 .services-container {
@@ -146,7 +134,7 @@ main {
 .service-box .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
@@ -206,24 +194,15 @@ main {
   transform: scale(1.01);
 }
 
-.menu ul li a i {
-  font-size: 1.5em;
-  color: rgb(43, 42, 42);
-  scale: 1.5;
-  transition: color 0.3s, transform 0.3s;
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
-.menu ul li a[aria-label="Facebook"] i:hover {
-  color: #1877f2;
-  transform: scale(1.5);
-}
+/* >>> RESPONSYWNOŚĆ <<< */
 
-.menu ul li a[aria-label="Instagram"] i:hover {
-  color: #e1306c;
-  transform: scale(1.5);
-}
-
-/* Zmiany w wersji mobilnej */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -231,31 +210,22 @@ main {
     text-align: center;
   }
 
-  .menu ul li a i {
-    font-size: 1.5em;
-  }
-
-  /* Dajemy im trochę przestrzeni do oddychania */
-  .menu ul li {
-    padding: 5px 0;
-  }
-
   .logo img {
-    width: 60px;
+    margin: 0 auto;
+    width: 140px;
     height: 60px;
-    margin-left: 0;
   }
 
-  /* Menu w wersji mobilnej */
   .menu ul {
-    display: block; /* Menu w pionie */
+    display: block;
     padding: 0;
     width: 100%;
   }
 
   .menu ul li {
-    width: 100%; /* Elementy zajmują pełną szerokość */
-    text-align: center; /* Tekst w środku */
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
   }
 
   .menu a {
@@ -265,39 +235,84 @@ main {
     text-align: center;
   }
 
-  main {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 6vw;
-    margin: 20px auto;
-    text-align: center;
-    margin-left: 0;
-  }
-
   .usluga {
     font-size: 20px;
-    color: #790b0b;
-    text-align: center;
     margin-top: 20px;
     margin-left: 10px;
   }
 
   .services-container {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   .service-box {
     height: 250px;
-    background-size: cover;
-    background-position: center;
   }
 
   .full-width-button {
     padding: 1rem 0;
     font-size: 1.2rem;
+  }
+}
+
+/* >>> DUŻE EKRANY <<< */
+@media (min-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+  }
+
+  .service-box h3 {
+    font-size: 1.7rem;
+  }
+
+  .service-box p {
+    font-size: 1.1rem;
+  }
+
+  .usluga {
+    font-size: 32px;
+  }
+
+  .full-width-button {
+    width: 50%;
+    margin: 2rem auto 0;
+    font-size: 1.6rem;
+  }
+}
+
+/* >>> BARDZO MAŁE EKRANY <<< */
+@media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+    height: 50px;
+  }
+
+  .usluga {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .service-box {
+    height: 220px;
+  }
+
+  .service-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-box p {
+    font-size: 0.95rem;
+  }
+
+  .full-width-button {
+    width: 90%;
+    margin: 30px auto 0;
+    font-size: 1.1rem;
+    padding: 1rem;
   }
 }

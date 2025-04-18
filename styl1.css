@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #ffffff;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -16,18 +27,14 @@ header {
 
 .logo img {
   margin-left: 50px;
-  width: 80px;
+  width: 180px;
   height: 80px;
 }
 
 .menu ul {
   list-style: none;
   display: flex;
-  gap: 20px; 
-}
-
-.menu ul li {
-  margin: 0;
+  gap: 20px;
 }
 
 .menu ul li a {
@@ -47,31 +54,6 @@ header {
 
 .menu a:hover {
   color: #ff3b3b;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-  background-color: #111111;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000000;
-  color: white;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
 }
 
 .menu a.active {
@@ -96,7 +78,97 @@ body {
   transform: scale(1.5);
 }
 
-/* Nowe reguły w media queries */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #111111;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.lewy {
+  margin-bottom: 25px;
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.prawy {
+  margin-top: 40px;
+  flex: 1 1 50%;
+  padding: 0 10px;
+  color: rgb(75, 75, 75);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prawy h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #790b0b;
+}
+
+.MP {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8018189d;
+  margin-bottom: 30px;
+}
+
+.prawy p {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.zdj {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin-top: 40px;
+  border-radius: 40px;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+
+.full-width-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #790b0b;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.full-width-button:hover {
+  background-color: #d11010;
+  transform: scale(1.01);
+}
+
+/* >>> RESPONSYWNOŚĆ <<< */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -104,19 +176,30 @@ body {
     text-align: center;
   }
 
-  .menu ul li a i {
-    font-size: 1.5em;
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
-  /* Dajemy im trochę przestrzeni do oddychania */
-  .menu ul li {
-    padding: 5px 0;
+  .zdj {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    border-radius: 40px;
   }
-  
-  .logo img {
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
+
+  .prawy h1 {
+    font-size: 28px;
+  }
+
+  .MP {
+    font-size: 20px;
+  }
+
+  .prawy p {
+    font-weight: bold;
+    font-size: 16px;
   }
 
   .menu ul {
@@ -125,15 +208,91 @@ body {
     padding: 10px 0;
   }
 
-  .menu a {
-    margin: 0;
+  .menu ul li {
+    padding: 5px 0;
   }
 
-  main {
+  .logo img {
+    margin: 0 auto;
+    width: 140px;
+    height: 60px;
+  }
+
+  .lewy,
+  .prawy {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .prawy {
+    text-align: justify;
     padding: 10px;
   }
 
-  h1 {
-    font-size: 6vw;
+  .full-width-button {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+/* >>> ROZSZERZONA RESPONSYWNOŚĆ <<< */
+
+/* Duże ekrany */
+@media (min-width: 1200px) {
+  section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 80px;
+  }
+
+  .prawy p {
+    font-size: 20px;
+  }
+
+  .prawy h1 {
+    font-size: 42px;
+  }
+
+  .MP {
+    font-size: 28px;
+  }
+}
+
+/* Bardzo małe ekrany */
+@media (max-width: 480px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menu ul li a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 120px;
+    height: 50px;
+  }
+
+  .prawy h1 {
+    font-size: 24px;
+  }
+
+  .MP {
+    font-size: 18px;
+  }
+
+  .prawy p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .full-width-button {
+    width: 90%;
+    margin: 30px auto 0;
+    font-size: 1.1rem;
+    padding: 1rem;
   }
 }
