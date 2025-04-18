@@ -81,7 +81,7 @@
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_subject" value="Nowa wiadomość z formularza kontaktowego">
-    <input type="hidden" name="_next" value="https://trenermarcinpluta.github.io/dzk.html">
+    <input type="hidden" name="_next" value="https://trenermarcinpluta.github.io/podziekowania.html">
 
     <button type="submit">Wyślij</button>
   </form>
@@ -101,7 +101,7 @@
   
       menuLinks.forEach(function (link) {
         const linkPath = link.getAttribute("href");
-        if (linkPath === currentPath || (linkPath === "glowna.html" && currentPath === "")) {
+        if (linkPath === currentPath || (linkPath === "strona-glowna.html" && currentPath === "")) {
           link.classList.add("active");
         }
       });
