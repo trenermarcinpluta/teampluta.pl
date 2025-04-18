@@ -14,6 +14,10 @@ header {
   color: white;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .logo img {
   margin-left: 50px;
   width: 180px;
@@ -24,7 +28,10 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
-  justify-content: center;
+  margin-bottom: 5px;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .menu ul li {
@@ -36,6 +43,7 @@ header {
   color: white;
   font-weight: bold;
   transition: color 0.3s;
+  margin: 0;
 }
 
 .menu a:hover {
@@ -44,7 +52,7 @@ header {
 
 .menu ul li a {
   display: block;
-  padding: 15px 20px;
+  padding: 15px;
   color: #fff;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -239,9 +247,17 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .kontakt{
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    width: 100%;
+    padding: 0;
     text-align: center;
   }
 
@@ -250,10 +266,9 @@ h1 {
   }
 
   .menu ul li {
-    padding: 5px 0;
     width: 100%;
     text-align: center;
-    padding: 5px 0;
+    padding:  0;
   }
 
   .logo img {
@@ -263,11 +278,12 @@ h1 {
   }
 
   .menu ul {
-    width: 100%;
     display: block;
     flex-direction: column;
     gap: 10px;
     padding: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .form-section {
