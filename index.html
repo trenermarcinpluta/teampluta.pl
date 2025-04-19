@@ -17,13 +17,13 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
+      <a href="/">Strona główna</a>
         <img src="logo-transparent.png" alt="Logo" />
       </a>
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="index.html">STRONA GŁÓWNA</a></li>
+        <li><a href="/">STRONA GŁÓWNA</a></li>
         <li><a href="uslugi.html">USŁUGI</a></li>
         <li><a href="kontakt.html">KONTAKT</a></li>
         <li>
@@ -71,7 +71,7 @@
   
       menuLinks.forEach(function (link) {
         const linkPath = link.getAttribute("href");
-        if (linkPath === currentPath || (linkPath === "index.html" && currentPath === "")) {
+        if (linkPath === currentPath || (linkPath === "/" && currentPath === "")) {
           link.classList.add("active");
         }
       });
